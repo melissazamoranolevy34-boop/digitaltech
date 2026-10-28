@@ -189,6 +189,15 @@ h2{font-size:1.3rem}
 /* ===== Documentos solo con nombre (sin descarga) ===== */
 a:not([href]){cursor:default}
 .links a:not([href]):hover,.cert-list a:not([href]):hover{transform:none;box-shadow:none;border-color:rgba(53,240,255,.3);color:inherit}
+
+/* ===== Descarga de CV (dos botones) ===== */
+.cv-downloads{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px}
+.cv-downloads .btn{margin-top:0}
+.btn-alt{background:transparent;color:var(--primary);border:2px solid var(--primary);box-shadow:0 0 14px rgba(53,240,255,.45)}
+.btn-alt::after{display:none}
+.btn-alt:hover{background:var(--primary);color:#000}
+@media(max-width:900px){.cv-downloads{justify-content:center}}
+@media(max-width:600px){.cv-downloads{flex-direction:column;align-items:stretch;text-align:center}}
 </style>
 </head>
 <body>
@@ -219,7 +228,10 @@ a:not([href]){cursor:default}
 <p class="lema">Transformación digital en salud con experiencia real en áreas críticas y atención domiciliaria.</p>
 <p class="hero-title">Consultoría en salud digital · UPC · UCI · UTI · Urgencias · Atención clínica domiciliaria.</p>
 <p>Mi trayectoria integra la práctica asistencial con el análisis funcional de sistemas HIS, la gestión de información biomédica y la evaluación de proyectos TI.</p>
-<a href="cv_salud_digital.pdf" class="btn" download>📄 Descargar CV profesional</a>
+<div class="cv-downloads">
+<a href="curriculum_vitae_informatica_biomedica.pdf" class="btn" download="CV_Melissa_Zamorano_Informatica_Biomedica.pdf">📄 CV Informática Biomédica</a>
+<a href="curriculum_vitae_tens.pdf" class="btn btn-alt" download="CV_Melissa_Zamorano_TENS.pdf">📄 CV TENS</a>
+</div>
 </div>
 <div class="hero-right">
 <div class="electric">
